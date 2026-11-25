@@ -1,4 +1,10 @@
 /* QA regressions: only opt into real photo files, preserve 44px touch targets. */
+.hero {
+  background:
+    linear-gradient(rgba(34, 38, 28, .56), rgba(34, 38, 28, .62)),
+    url('images/wedding-album/photo-01.jpg') center / cover no-repeat;
+}
+
 .card-actions .text-link,
 .gift-card .text-link {
   min-height: 44px;
