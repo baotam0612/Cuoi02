@@ -1,0 +1,26 @@
+/* QA regressions: only opt into real photo files, preserve 44px touch targets. */
+.card-actions .text-link,
+.gift-card .text-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.photo:not(.photo--available) { cursor: default; }
+.photo:not(.photo--available) figcaption { opacity: 1; }
+.photo--available { cursor: pointer; }
+.photo--available:hover img { transform: scale(1.03); }
+.gallery-placeholder {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  color: #fff8;
+  font: italic 600 clamp(2rem, 6vw, 4rem) 'Playfair Display', serif;
+}
+.photo--available figcaption { opacity: 0; transition: opacity .2s; }
+.photo--available:hover figcaption,
+.photo--available:focus-visible figcaption { opacity: 1; }
+
+@media (min-width: 721px) and (max-width: 1023px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
