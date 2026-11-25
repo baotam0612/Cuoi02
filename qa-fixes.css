@@ -6,6 +6,20 @@
   align-items: center;
 }
 
+/* Every interactive target meets the 44 × 44px minimum, including desktop nav. */
+button,
+a,
+input,
+select,
+textarea {
+  min-inline-size: 44px;
+  min-block-size: 44px;
+}
+
+nav a {
+  min-inline-size: 44px;
+}
+
 .photo:not(.photo--available) { cursor: default; }
 .photo:not(.photo--available) figcaption { opacity: 1; }
 .photo--available { cursor: pointer; }
